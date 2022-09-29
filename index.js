@@ -102,7 +102,7 @@ app.use(seneca.export('web'));
 
 
 app.listen(3009)
-console.log("Server listening on localhost:3009....");
+console.log("Server listening on http://localhost:3009/products/get-all-products");
 console.log("----- Requests -------------------------");
 console.log("http://localhost:3009/products/add-product?product=Laptop&price=201.99&category=PC");
 console.log("http://localhost:3009/products/get-all-products");
