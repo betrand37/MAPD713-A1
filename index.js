@@ -60,13 +60,7 @@ seneca.add('role:api, cmd:get-product', function (args, done) {
 });
 
 
-seneca.add('role:api, cmd:delete-product', function (args, done) {
-    console.log("--> cmd:delete-product, args.product_id: " + args.product_id);
-    seneca.act({ role: 'products', cmd: 'delete', data: { product_id: args.product_id } }, function (err, msg) {
-        console.log(msg);
-        done(err, msg);
-    });
-});
+
 
 seneca.add('role:api, cmd:delete-all-products', function (args, done) {
     done(null, { cmd: "delete-all-products" });
@@ -113,5 +107,3 @@ console.log("----- Requests -------------------------");
 console.log("http://localhost:3009/products/add-product?product=Laptop&price=201.99&category=PC");
 console.log("http://localhost:3009/products/get-all-products");
 console.log("http://localhost:3009/products/delete-all-products");
-//console.log("http://localhost:3009/products/get-user?user_id=1245");
-// console.log("http://localhost:3009/products/delete-user?user_id=1245");
